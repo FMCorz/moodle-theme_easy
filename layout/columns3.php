@@ -34,13 +34,13 @@ if (right_to_left()) {
 }
 ?>
 
-<?php require(__DIR__ . '/elements/head.php'); ?>
+<?php echo $OUTPUT->element('head'); ?>
 
-<?php require(__DIR__ . '/elements/header.php'); ?>
+<?php echo $OUTPUT->element('header'); ?>
 
 <div id="page" class="container-fluid">
 
-    <?php require(__DIR__ . '/elements/page-header.php'); ?>
+    <?php echo $OUTPUT->element('page-header'); ?>
 
     <div id="page-content" class="row-fluid">
         <div id="<?php echo $mainregionid; ?>" class="span9">
@@ -56,8 +56,8 @@ if (right_to_left()) {
         <?php echo $OUTPUT->blocks('side-post', 'span3'); ?>
     </div>
 
-    <?php require(__DIR__ . '/elements/page-footer.php'); ?>
+    <?php echo $OUTPUT->element('page-footer'); ?>
 
 </div>
 
-<?php require(__DIR__ . '/elements/foot.php'); ?>
+<?php echo $OUTPUT->element('foot'); ?>

@@ -24,7 +24,7 @@
 
 defined('MOODLE_INTERNAL') || die(); ?>
 
-<?php require(__DIR__ . '/elements/head.php'); ?>
+<?php echo $OUTPUT->element('head'); ?>
 
 <div id="page">
     <div id="page-content" class="clearfix">
@@ -32,4 +32,4 @@ defined('MOODLE_INTERNAL') || die(); ?>
     </div>
 </div>
 
-<?php require(__DIR__ . '/elements/foot.php'); ?>
+<?php echo $OUTPUT->element('foot'); ?>

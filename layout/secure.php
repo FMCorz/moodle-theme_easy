@@ -24,7 +24,7 @@
 
 defined('MOODLE_INTERNAL') || die(); ?>
 
-<?php require(__DIR__ . '/elements/head.php'); ?>
+<?php echo $OUTPUT->element('head'); ?>
 
 <header role="banner" class="navbar navbar-fixed-top">
     <nav role="navigation" class="navbar-inner">
@@ -64,4 +64,4 @@ defined('MOODLE_INTERNAL') || die(); ?>
 
 </div>
 
-<?php require(__DIR__ . '/elements/foot.php');
+<?php echo $OUTPUT->element('foot');

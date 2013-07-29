@@ -37,13 +37,13 @@ if (!right_to_left()) {
 
 ?>
 
-<?php require(__DIR__ . '/elements/head.php'); ?>
+<?php echo $OUTPUT->element('head'); ?>
 
-<?php require(__DIR__ . '/elements/header.php'); ?>
+<?php echo $OUTPUT->element('header'); ?>
 
 <div id="page" class="container-fluid">
 
-    <?php require(__DIR__ . '/elements/page-header.php'); ?>
+    <?php echo $OUTPUT->element('page-header'); ?>
 
     <div id="page-content" class="row-fluid">
         <section id="region-main" class="span9 <?php echo $regionmainextraclasses; ?>">
@@ -54,8 +54,8 @@ if (!right_to_left()) {
         <?php echo $OUTPUT->blocks('side-pre', 'span3 ' . $sidepreextraclasses); ?>
     </div>
 
-    <?php require(__DIR__ . '/elements/page-footer.php'); ?>
+    <?php echo $OUTPUT->element('page-footer'); ?>
 
 </div>
 
-<?php require(__DIR__ . '/elements/foot.php'); ?>
+<?php echo $OUTPUT->element('foot'); ?>
