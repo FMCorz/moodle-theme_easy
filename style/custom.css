@@ -1,0 +1,21 @@
+/**
+ * Use this file to customize the theme.
+ *
+ * You can also create other files, which will have to be referenced
+ * in the config.php file, see $THEME->sheets.
+ */
+
+.block {
+    border: 0;
+    box-shadow: none;
+    background: none;
+}
+.block .header {
+    border-bottom: 1px solid #ccc;
+}
+
+.courses .coursebox, .courses .coursebox:hover, .courses .coursebox.even{
+    border: 0;
+    background: none;
+    padding: 0;
+}
