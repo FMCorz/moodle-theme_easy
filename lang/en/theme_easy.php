@@ -24,5 +24,12 @@
 
 defined('MOODLE_INTERNAL') || die();
 
+// Message displayed to the user when they choose this theme.
 $string['choosereadme'] = 'Hey, I\'m Easy';
+
+// Human readable name of the plugin.
 $string['pluginname'] = 'Easy';
+
+// Human readable name of th blog regions.
+$string['region-side-post'] = 'Right';
+$string['region-side-pre'] = 'Left';
