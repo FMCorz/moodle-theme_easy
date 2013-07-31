@@ -3,6 +3,8 @@
  *
  * You can also create other files, which will have to be referenced
  * in the config.php file, see $THEME->sheets.
+ *
+ * If you wish the edit Bootstrap, refer to the file less/mybootstrap.less.
  */
 
 .block {

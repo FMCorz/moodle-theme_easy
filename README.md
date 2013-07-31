@@ -8,13 +8,13 @@ Introduction
 
 In Moodle 2.5 was introduced the theme 'Clean', which purpose was (but not only) to make it easier to start off a new theme. While it is definitely a lot easier than before, there are still a few concepts that might confuse some of the new themers out there. This theme trimmed out all the unnecessary things to leave a cleaner 'Clean'.
 
-- No more settings
-- And so, no more use of the settings
-- No more specific functions
+- No more settings, and so, no more use of the settings
+- No more specific confusing functions
 - Cleaned up config file
 - Added inline documentation
 - Specific renderer to add layout elements
 - Extracted common elements from layout pages
+- Quick method to customize Bootstrap using LESS
 
 Requirements
 ------------

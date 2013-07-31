@@ -1,0 +1,61 @@
+/**
+ * Your custom bootstrap.
+ *
+ * The parent boostrapbase is responsible for including Bootstrap and all the related Moodle
+ * stuff. It uses a set of variables to declare the default colours, sizing, etc...
+ *
+ * The problem, as we are here in a child theme, is that we cannot override any of the
+ * variables, and thus we have to manually redeclare all of the rules that bootstrapbase
+ * has set and manually re-set everything.
+ *
+ * Well, no, there is a solution! What we are going to do here is bypassing all the CSS
+ * that boostrapbase is defining by redefining it ourselves. What is the purpose of
+ * bootstrapbase then? Well, thankfully all the job has been done for us, and we are still
+ * going to use that, the only difference is that we are not going to use the compiled
+ * CSS files of bootstrapbase.
+ *
+ * How to use this file?
+ * ---------------------
+ *
+ * 1/ You should learn a little bit how to be able to compile a LESS file, and for
+ * that I recommend you to visit: http://docs.moodle.org/dev/LESS. Once you get familiar
+ * with that, please remember that the CSS file that you will be generating has to be placed
+ * in the style/ folder, along with the other CSS files. If you are using the command line
+ * and you are in the less/ folder, the following command would do the job:
+ *
+ *   recess --compile mybootstrap.less > ../style/mybootstrap.css
+ *
+ * 2/ Make sure that you are including this file in your theme. To do so, you have
+ * to add it to the list of sheets in your config.php. I highly recommend that you add this
+ * one as the first of all the sheets. You should end up with something like this:
+ *
+ *   $THEME->sheets = array('mybootstrap', 'custom');
+ *
+ * 3/ You should tell your theme not to include the CSS file from bootstrapbase.
+ * This is not a mandatory step, but it is highly recommended as it is pointless to load
+ * the file from bootstrapbase as we will be overwriting 100% of its rules. This can be done
+ * by using `parents_exclude_sheets`, you can simply copy the following in your config.php.
+ *
+ *   $THEME->parents_exclude_sheets = array(
+ *     'bootstrapbase' => array('moodle')
+ *   );
+ *
+ * Ok, now that you have prepared all the stuff, you can start adding variables to this file.
+ * The complete reference of variables that can be used can be found in
+ * theme/bootstrapbase/less/bootstrap/variables.less.
+ */
+
+/**
+ * This line specifies that we are importing everything from bootstrapbase.
+ * De not remove it!
+ * Do not add anything above it!
+ */
+@import "../../bootstrapbase/less/moodle";
+
+/**
+ * Define all your variables from here. Some examples are commented out below.
+ */
+
+// @textColor: black;
+// @linkColor: red;
+// @baseFontSize: 12px;
