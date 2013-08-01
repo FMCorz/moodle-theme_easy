@@ -76,7 +76,10 @@ class theme_easy_core_renderer extends theme_bootstrapbase_core_renderer {
      * @return string
      */
     public function element($name, $vars = array()) {
-        global $CFG, $OUTPUT, $SITE;
+        global $CFG, $SITE, $USER;
+        $OUTPUT = $this;
+        $PAGE = $this->page;
+        $COURSE = $this->page->course;
 
         $element = $name . '.php';
         $candidate = $this->page->theme->dir . '/layout/elements/' . $element;
