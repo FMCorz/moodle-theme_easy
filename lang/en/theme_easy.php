@@ -30,6 +30,6 @@ $string['choosereadme'] = 'Hey, I\'m Easy';
 // Human readable name of the plugin.
 $string['pluginname'] = 'Easy';
 
-// Human readable name of th blog regions.
+// Human readable name of the block regions.
 $string['region-side-post'] = 'Right';
 $string['region-side-pre'] = 'Left';
