@@ -44,7 +44,8 @@ $THEME->sheets = array('custom');
 /**
  * The list of CSS files (without the .css) to use for the text editor.
  */
-$THEME->editor_sheets = array();
+
+// $THEME->editor_sheets = array();
 
 /**
  * The layout files.
