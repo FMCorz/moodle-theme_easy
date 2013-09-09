@@ -55,6 +55,25 @@ A mandatory step is to rename all the references to `Easy`.
 
 Now, login as an administrator, and visit the "Notifications" page. You should be prompt to install the theme Batman. And done!
 
+Let the theming begin
+---------------------
+
+There are 2 easy ways to style this theme, either using pure CSS, or using LESS.
+
+### CSS
+
+Simply edit the custom.css file, then purge your caches and voilà. This is extremely easy, but less flexible than it would be if you were using LESS. Customizing in pure CSS is usually recommended for minimal tweaks, or patient designers.
+
+### LESS
+
+The advantage of using LESS is that you do not need to override every single rule to style a large amount of places. You can easily customize Bootstrap shipped with Moodle, and all other places in Moodle re-using Bootstrap variables. To make use of this you need to be familiar with [LESS](http://lesscss.org/), and know how to compile a LESS file to CSS.
+
+Assuming that you will be compiling the LESS file `less/mybootstrap.less` to `css/mybootstrap.css`, you will need to change the configuration of the theme to include this new CSS file. This is done by changing the value of `$THEME->sheets` in `config.php`. Simply add `mybootstrap` to get something like this:
+
+    $THEME->sheets = array('mybootstrap', 'custom');
+
+That's about it! Read more about this in the file `less/mybootstrap.less`.
+
 License
 -------
 
