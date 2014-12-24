@@ -43,6 +43,16 @@
  * Ok, now that you have prepared all the stuff, you can start adding variables to this file.
  * The complete reference of variables that can be used can be found in
  * theme/bootstrapbase/less/bootstrap/variables.less.
+ *
+ * Alternative, on the fly compilation.
+ * ------------------------------------
+ *
+ * Since Moodle 2.7 it is possible to compile this file on the fly. This is only useful when
+ * your theme has settings which give the user control over styling options, for instance
+ * a custom background colour. In which case you can use the config setting $THEME->lessfile.
+ *
+ * If you use this method you do not need to add the compiled LESS file to $THEME->sheets.
+ * Please refer to the documentation of $THEME->lessfile in config.php for more information.
  */
 
 /**

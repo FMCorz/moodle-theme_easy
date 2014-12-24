@@ -129,6 +129,14 @@ $THEME->sheets = array('custom');
 
 
 /**
+ * Enable docking of the blocks.
+ *
+ * When this setting is set to true the blocks can be docked.
+ */
+
+// $THEME->enable_dock = false;
+
+/**
  * Javascript files.
  *
  * The names of all the javascript files in this theme that you would
@@ -188,10 +196,79 @@ $THEME->sheets = array('custom');
  * a file call lib.php.
  *
  * The function will receive 2 parameters, the first is the content of
- * the CSS file. The second is the theme_config object.
+ * the CSS file. The second is the theme_config object. The function
+ * should return the modified version of the CSS.
+ *
+ * From Moodle 2.7 using $THEME->lessfile and associated callbacks
+ * is a more flexible solution.
  */
 
 // $THEME->csspostprocess = 'theme_easy_my_postprocess';
+
+/**
+ * The LESS file to compile. (Advanced)
+ *
+ * Since Moodle 2.7 it is possible to compile a LESS file on the fly. You
+ * should not use this feature unless you want to dynamically change the
+ * variables used in LESS dynamically. For instance if you have a settings
+ * page that allows the user to change the background color, then you would
+ * want to update the variable @bodyBackground accordingly, and directly
+ * using a LESS file makes sense.
+ *
+ * The LESS file has to be located in the less/ folder of the theme. You
+ * can only ever have one LESS file. In order to change the values of
+ * the variables or add custom LESS content on the fly, you must also
+ * declare the settings $THEME->lessvariablescallback and
+ * $THEME->extralesscallback.
+ *
+ * In most cases if you use this setting you should not need to use
+ * $THEME->sheets any more. Or at the very least you MUST not include any
+ * compiled version of your LESS file as it would only duplicate the CSS.
+ * More importantly the less file CANNOT have the same name as a file
+ * declared in $THEME->sheets.
+ *
+ * Please note that $THEME->lessfile is NEVER inherited from
+ * the parent theme. Also, as compiling LESS is a slow process, the compiled
+ * file is cached, make sure that you turn designer mode on when you are
+ * working on your theme.
+ *
+ * You can refer to the theme More (theme_more) as an example.
+ */
+
+// $THEME->lessfile = 'mybootstrap';
+
+/**
+ * Injecting LESS variables. (Advanced)
+ *
+ * Used in combination with $THEME->lessfile, this declares a callback
+ * function to inject LESS variables. By convention, the name of
+ * this function should start by theme_yourthemename and be placed in
+ * a file call lib.php. That function must return an associative
+ * array of variable names and values. For example, if you want to change
+ * the variable @bodyBackground to #ffffff, you would return the following
+ * array from the function:
+ *
+ *     array('bodyBackground' => '#ffffff');
+ *
+ * The first parameter passed to the function is the theme_config object.
+ */
+
+// $THEME->lessvariablescallback = 'theme_easy_less_variables';
+
+/**
+ * Injecting LESS content. (Advanced)
+ *
+ * Used in combination with $THEME->lessfile, this declares a callback
+ * function to inject LESS code. By convention, the name of
+ * this function should start by theme_yourthemename and be placed in
+ * a file call lib.php. That function must return a string
+ * containing LESS code. This code will be injected after the LESS content
+ * of the file declared in $THEME->lessfile. If you want to dynamically
+ * declare variables it is highly recommended that you use
+ * $THEME->lessvariablescallback instead.
+ */
+
+// $THEME->extralesscallback = 'theme_easy_extra_less';
 
 /**
  * None of the following settings should be modified.

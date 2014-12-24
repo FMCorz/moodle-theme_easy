@@ -11,7 +11,7 @@ In Moodle 2.5 was introduced the theme 'Clean', which purpose was (but not only)
 - No more settings, and so, no more use of the settings
 - No more specific confusing functions
 - Cleaned up config file
-- Added inline documentation
+- Added of lot inline documentation
 - Specific renderer to add layout elements
 - Extracted common elements from layout pages
 - Quick method to customize Bootstrap using LESS
@@ -73,6 +73,8 @@ Assuming that you will be compiling the LESS file `less/mybootstrap.less` to `cs
     $THEME->sheets = array('mybootstrap', 'custom');
 
 That's about it! Read more about this in the file `less/mybootstrap.less`.
+
+Since Moodle 2.7 you can also compile LESS on the fly, you will find more information about this in `less/mybootstrapless.less` and in the documentation of `$THEME->lessfile` in `config.php`.
 
 License
 -------
